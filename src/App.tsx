@@ -1,7 +1,9 @@
 import "./App.css";
 
-function App() {
-    return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+export default function App() {
+    return (
+        <div className="flex flex-col h-screen overflow-hidden">
+            <main className="flex flex-col sm:flex-row flex-1 overflow-hidden"></main>
+        </div>
+    );
 }
-
-export default App;
