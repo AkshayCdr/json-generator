@@ -71,4 +71,18 @@ test.describe("Form Validation and Submission", () => {
             "This field is required"
         );
     });
+
+    test("email pattern validation", async ({ page }) => {
+        await page.locator("#email").fill("invalid@g");
+        await page.locator('button[type="submit"]').click();
+
+        const emailError = page.locator("#email ~ .text-red-500");
+        await expect(emailError).toHaveText(
+            "Please enter a valid email address"
+        );
+
+        await page.locator("#email").fill("test@example.com");
+        await page.locator('button[type="submit"]').click();
+        await expect(emailError).not.toBeVisible();
+    });
 });
