@@ -3,6 +3,18 @@ type ModalArgs = {
     setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+const downloadJson = (formData: any) => {
+    const blob = new Blob([JSON.stringify(formData, null, 2)], {
+        type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "formData.json";
+    a.click();
+    URL.revokeObjectURL(url);
+};
+
 export default function Modal({ formData, setModalIsOpen }: ModalArgs) {
     return (
         <section className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -15,6 +27,12 @@ export default function Modal({ formData, setModalIsOpen }: ModalArgs) {
                         className="text-white bg-red-500 hover:bg-red-600 rounded-lg px-4 py-2"
                     >
                         Close
+                    </button>
+                    <button
+                        onClick={() => downloadJson(formData)}
+                        className="text-white bg-blue-500 hover:bg-blue-600 rounded-lg px-4 py-2"
+                    >
+                        Download Data
                     </button>
                 </div>
             </div>
