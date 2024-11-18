@@ -56,4 +56,18 @@ test.describe("JSON Input Validation", () => {
         await expect(errorLabel).toBeVisible();
         await expect(errorLabel).toContainText("Invalid JSON");
     });
+
+    test("On empty input ", async ({ page }) => {
+        const jsonInput = page.locator('textarea[name="json-input"]');
+
+        await jsonInput.fill("");
+
+        const errorLabel = page.locator("#json-error");
+        await expect(errorLabel).not.toBeVisible();
+
+        const defaultMessage = page.locator(
+            "text=Enter valid JSON to generate the form"
+        );
+        await expect(defaultMessage).toBeVisible();
+    });
 });
