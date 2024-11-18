@@ -31,6 +31,9 @@ export default function FormField({
                         case "text":
                         case "email":
                         case "checkbox":
+                        case "tel":
+                        case "file":
+                        case "url":
                             return (
                                 <input
                                     id={id}

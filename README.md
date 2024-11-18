@@ -170,3 +170,92 @@ live on https://json-generate.netlify.app/
   ]
 }
 ```
+
+```json
+{
+  "formTitle": "Job Application Form",
+  "formDescription": "Apply for your desired role by filling out the details below.",
+  "fields": [
+    {
+      "id": "fullName",
+      "type": "text",
+      "label": "Full Name",
+      "required": true,
+      "placeholder": "Enter your full name"
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "Email Address",
+      "required": true,
+      "placeholder": "you@example.com",
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "phone",
+      "type": "tel",
+      "label": "Phone Number",
+      "required": true,
+      "placeholder": "Enter your phone number",
+      "validation": {
+        "pattern": "^\\+?[1-9]\\d{1,14}$",
+        "message": "Please enter a valid phone number"
+      }
+    },
+    {
+      "id": "position",
+      "type": "select",
+      "label": "Position Applying For",
+      "required": true,
+      "options": [
+        { "value": "developer", "label": "Software Developer" },
+        { "value": "designer", "label": "UI/UX Designer" },
+        { "value": "manager", "label": "Project Manager" },
+        { "value": "other", "label": "Other" }
+      ]
+    },
+    {
+      "id": "experience",
+      "type": "radio",
+      "label": "Years of Experience",
+      "required": true,
+      "options": [
+        { "value": "0-1", "label": "0-1 years" },
+        { "value": "2-5", "label": "2-5 years" },
+        { "value": "6-10", "label": "6-10 years" },
+        { "value": "10+", "label": "10+ years" }
+      ]
+    },
+    {
+      "id": "resume",
+      "type": "file",
+      "label": "Upload Resume",
+      "required": true,
+      "accept": ".pdf,.doc,.docx",
+      "maxFileSize": 5
+    },
+    {
+      "id": "coverLetter",
+      "type": "textarea",
+      "label": "Cover Letter",
+      "required": false,
+      "placeholder": "Write your cover letter here..."
+    },
+    {
+      "id": "linkedin",
+      "type": "url",
+      "label": "LinkedIn Profile",
+      "required": false,
+      "placeholder": "https://linkedin.com/in/yourprofile",
+      "validation": {
+        "pattern": "^(https?://)?(www\\.)?linkedin\\.com/.+$",
+        "message": "Please enter a valid LinkedIn profile URL"
+      }
+    }
+  ]
+}
+
+```

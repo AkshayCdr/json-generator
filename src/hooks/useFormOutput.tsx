@@ -15,6 +15,9 @@ const isValidSchema = (schema: FormSchema): boolean => {
                 "radio",
                 "textarea",
                 "checkbox",
+                "tel",
+                "file",
+                "url",
             ].includes(field.type)
         );
     });
