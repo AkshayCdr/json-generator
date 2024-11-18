@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
+import { FormSchema } from "./jsonInput";
 
-export default function FormOutput() {
+type FormInputProps = {
+    formSchema: FormSchema | null;
+};
+
+export default function FormOutput({ formSchema }: FormInputProps) {
     const {
         register,
         handleSubmit,

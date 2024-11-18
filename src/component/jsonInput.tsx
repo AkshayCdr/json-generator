@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 // import { FormSchema } from "../FormOutput/formOutput";
 
-type FormInputProps = {
-    formSchema: FormSchema | null;
-};
-
-type FormField = {
+export type FormFieldType = {
     id: string;
     type: "text" | "email" | "select" | "radio" | "textarea";
     label: string;
@@ -21,7 +17,7 @@ type FormField = {
 export type FormSchema = {
     formTitle: string;
     formDescription: string;
-    fields: FormField[];
+    fields: FormFieldType[];
 };
 
 type JsonInputProps = {
