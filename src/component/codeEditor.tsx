@@ -1,4 +1,12 @@
-export default function CodeEditor() {
+type CodeEditorArgs = {
+    isSmallScreen: boolean;
+    leftWidth: number;
+};
+
+export default function CodeEditor({
+    isSmallScreen,
+    leftWidth,
+}: CodeEditorArgs) {
     return (
         <section
             style={{
