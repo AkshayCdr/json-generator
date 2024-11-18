@@ -11,7 +11,7 @@ const handleMouseDown = (
     e.preventDefault();
     const startX = e.clientX;
     const startY = e.clientY;
-    const startWidth = leftWidthRef.current;
+    const startWidth = Number(leftWidthRef.current);
     const isSmallScreen = window.innerWidth < 640;
 
     const handleMouseMove = (moveEvent: MouseEvent) => {

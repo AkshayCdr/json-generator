@@ -21,7 +21,7 @@ export default function FormOutput({ formSchema }: FormInputProps) {
 
     return (
         <div className=" flex justify-center">
-            {isValid && (
+            {isValid && formSchema && (
                 <form
                     className="flex flex-1 flex-col border-b-gray-100 p-10 max-w-2xl shadow-2xl gap-1"
                     onSubmit={handleSubmit(onSubmit)}
