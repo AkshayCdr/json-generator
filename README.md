@@ -1,4 +1,5 @@
 - [x] added tailwind
 - [x] deployed on https://json-generate.netlify.app/
 - [x] resizable section
-- [x] 
+- [x] json editor
+- [ ] form preview
