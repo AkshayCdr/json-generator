@@ -46,7 +46,11 @@ export default function FormOutput({ formSchema }: FormInputProps) {
                     </button>
                 </form>
             )}
-            {!isValid && <h1>Enter valid JSON to generate the form</h1>}
+            {!isValid && (
+                <h1 className="text-lg md:text-2xl text-red-700 font-bold border-2 p-4 rounded-lg shadow-lg">
+                    ! Enter valid JSON to generate the form
+                </h1>
+            )}
             {isModalOpen && (
                 <Modal formData={formData} setModalIsOpen={setModalIsOpen} />
             )}

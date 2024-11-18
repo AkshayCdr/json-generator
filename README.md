@@ -8,6 +8,15 @@ live on https://json-generate.netlify.app/
 
 ---
 
+## How to set up locally
+
+- clone repo
+- cd json-generator
+- npm install
+- npm run dev
+
+---
+
 - [x] added tailwind
 - [x] deployed on https://json-generate.netlify.app/
 - [x] resizable section
@@ -16,4 +25,4 @@ live on https://json-generate.netlify.app/
 - [x] form submit modal
 - [x] dark mode
 - [x] download json
-- [ ] playwright test
+- [x] playwright test
