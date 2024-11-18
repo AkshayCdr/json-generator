@@ -4,3 +4,6 @@
 - [x] json editor
 - [x] form preview
 - [x] form submit modal
+- [x] dark mode
+- [ ] download json
+- [ ] playwright test
