@@ -23,7 +23,7 @@ export default function FormOutput({ formSchema }: FormInputProps) {
         <div className=" flex justify-center">
             {isValid && formSchema && (
                 <form
-                    className="flex flex-1 flex-col border-b-gray-100 p-10 max-w-2xl shadow-2xl gap-1"
+                    className="flex flex-1 flex-col border-b-gray-100 p-10 max-w-2xl shadow-2xl gap-1 rounded-lg"
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     <h1 id="form-title" className="text-2xl font-bold">

@@ -8,7 +8,7 @@ live on https://json-generate.netlify.app/
 
 ### with different input types
 
-[Imgur](https://i.imgur.com/0nBWAuC.png)
+![Imgur](https://i.imgur.com/0nBWAuC.png)
 
 ---
 
