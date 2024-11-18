@@ -104,3 +104,69 @@ live on https://json-generate.netlify.app/
 }
 ```
 
+```json
+{
+  "formTitle": "Customer Feedback Form",
+  "formDescription": "We value your feedback! Please take a moment to complete this form.",
+  "fields": [
+    {
+      "id": "customerName",
+      "type": "text",
+      "label": "Name",
+      "required": true,
+      "placeholder": "Enter your name"
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "Email",
+      "required": true,
+      "placeholder": "yourname@example.com",
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address"
+      }
+    },
+    {
+      "id": "rating",
+      "type": "radio",
+      "label": "Overall Satisfaction",
+      "required": true,
+      "options": [
+        { "value": "excellent", "label": "Excellent" },
+        { "value": "good", "label": "Good" },
+        { "value": "average", "label": "Average" },
+        { "value": "poor", "label": "Poor" }
+      ]
+    },
+    {
+      "id": "servicesUsed",
+      "type": "checkbox",
+      "label": "Services Used",
+      "required": false,
+      "options": [
+        { "value": "consulting", "label": "Consulting" },
+        { "value": "support", "label": "Customer Support" },
+        { "value": "development", "label": "Product Development" },
+        { "value": "other", "label": "Other" }
+      ]
+    },
+    {
+      "id": "improvements",
+      "type": "textarea",
+      "label": "Suggestions for Improvement",
+      "required": false,
+      "placeholder": "How can we improve our services?"
+    },
+    {
+      "id": "subscribe",
+      "type": "checkbox",
+      "label": "Subscribe to Newsletter",
+      "required": false,
+      "options": [
+        { "value": "yes", "label": "Yes, I want to receive updates and offers" }
+      ]
+    }
+  ]
+}
+```
