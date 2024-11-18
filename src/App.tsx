@@ -40,6 +40,7 @@ export default function App() {
                 <PreviewWebsite
                     isSmallScreen={isSmallScreen}
                     leftWidth={leftWidth}
+                    formSchema={formSchema}
                 />
             </main>
         </div>

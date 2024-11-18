@@ -2,4 +2,5 @@
 - [x] deployed on https://json-generate.netlify.app/
 - [x] resizable section
 - [x] json editor
-- [ ] form preview
+- [x] form preview
+- [x] form submit modal
