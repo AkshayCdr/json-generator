@@ -61,4 +61,14 @@ test.describe("Form Validation and Submission", () => {
             .locator('textarea[name="json-input"]')
             .fill(JSON.stringify(testForm, null, 2));
     });
+
+    test("shows validation errors empty fields", async ({ page }) => {
+        await page.locator('button[type="submit"]').click();
+
+        const errorMessages = page.locator(".text-red-500");
+        await expect(errorMessages).toHaveCount(5);
+        await expect(errorMessages.first()).toHaveText(
+            "This field is required"
+        );
+    });
 });
