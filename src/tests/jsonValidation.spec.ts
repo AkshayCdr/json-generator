@@ -70,4 +70,28 @@ test.describe("JSON Input Validation", () => {
         );
         await expect(defaultMessage).toBeVisible();
     });
+
+    test("validates field types", async ({ page }) => {
+        const jsonInput = page.locator('textarea[name="json-input"]');
+
+        const invalidFieldType = {
+            formTitle: "Test Form",
+            formDescription: "test",
+            fields: [
+                {
+                    id: "test",
+                    type: "invalid",
+                    label: "Test",
+                    required: true,
+                },
+            ],
+        };
+
+        await jsonInput.fill(JSON.stringify(invalidFieldType, null, 2));
+
+        const defaultMessage = page.locator(
+            "text=Enter valid JSON to generate the form"
+        );
+        await expect(defaultMessage).toBeVisible();
+    });
 });
