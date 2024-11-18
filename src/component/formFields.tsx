@@ -24,7 +24,7 @@ export default function FormField({
                 {label}
                 {required && <span className="text-red-600 ml-1">*</span>}
             </label>
-
+            input
             <div className="w-full sm:w-2/3">
                 {(() => {
                     switch (type) {
@@ -34,6 +34,11 @@ export default function FormField({
                         case "tel":
                         case "file":
                         case "url":
+                        case "color":
+                        case "date":
+                        case "image":
+                        case "range":
+                        case "time":
                             return (
                                 <input
                                     id={id}

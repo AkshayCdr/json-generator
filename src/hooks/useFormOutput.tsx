@@ -18,6 +18,11 @@ const isValidSchema = (schema: FormSchema): boolean => {
                 "tel",
                 "file",
                 "url",
+                "color",
+                "date",
+                "image",
+                "range",
+                "time",
             ].includes(field.type)
         );
     });

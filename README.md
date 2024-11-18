@@ -259,3 +259,67 @@ live on https://json-generate.netlify.app/
 }
 
 ```
+
+
+```json
+
+{
+  "formTitle": "Event Details Form",
+  "formDescription": "Provide the necessary details for your event.",
+  "fields": [
+    {
+      "id": "eventName",
+      "type": "text",
+      "label": "Event Name",
+      "required": true,
+      "placeholder": "Enter the event name"
+    },
+    {
+      "id": "eventDate",
+      "type": "date",
+      "label": "Event Date",
+      "required": true
+    },
+    {
+      "id": "eventTime",
+      "type": "time",
+      "label": "Event Time",
+      "required": true
+    },
+    {
+      "id": "themeColor",
+      "type": "color",
+      "label": "Theme Color",
+      "required": false,
+      "default": "#000000"
+    },
+    {
+      "id": "eventImage",
+      "type": "file",
+      "label": "Upload Event Image",
+      "required": false,
+      "accept": ".jpg,.jpeg,.png",
+      "maxFileSize": 5
+    },
+    {
+      "id": "expectedAttendees",
+      "type": "range",
+      "label": "Expected Number of Attendees",
+      "required": true,
+      "min": 10,
+      "max": 500,
+      "step": 10,
+      "default": 50
+    },
+    {
+      "id": "additionalDetails",
+      "type": "textarea",
+      "label": "Additional Details",
+      "required": false,
+      "placeholder": "Provide any additional information about the event..."
+    }
+  ]
+}
+
+
+```

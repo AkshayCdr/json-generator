@@ -12,7 +12,12 @@ export type FormFieldType = {
         | "checkbox"
         | "tel"
         | "file"
-        | "url";
+        | "url"
+        | "color"
+        | "date"
+        | "image"
+        | "range"
+        | "time";
     label: string;
     required: boolean;
     placeholder?: string;
