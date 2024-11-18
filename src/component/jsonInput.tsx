@@ -3,7 +3,7 @@ import TextArea from "./textArea";
 
 export type FormFieldType = {
     id: string;
-    type: "text" | "email" | "select" | "radio" | "textarea";
+    type: "text" | "email" | "select" | "radio" | "textarea" | "checkbox";
     label: string;
     required: boolean;
     placeholder?: string;

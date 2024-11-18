@@ -1,4 +1,4 @@
-import { test, expect, Page } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
 const ViewportSizes = {
     mobile: { width: 375, height: 667 },

@@ -8,9 +8,14 @@ const isValidSchema = (schema: FormSchema): boolean => {
     return schema.fields?.every((field) => {
         return (
             requiredFieldKeys.every((key) => key in field) &&
-            ["text", "email", "select", "radio", "textarea"].includes(
-                field.type
-            )
+            [
+                "text",
+                "email",
+                "select",
+                "radio",
+                "textarea",
+                "checkbox",
+            ].includes(field.type)
         );
     });
 };

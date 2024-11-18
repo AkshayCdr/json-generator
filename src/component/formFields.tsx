@@ -30,6 +30,7 @@ export default function FormField({
                     switch (type) {
                         case "text":
                         case "email":
+                        case "checkbox":
                             return (
                                 <input
                                     id={id}
