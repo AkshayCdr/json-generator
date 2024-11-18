@@ -85,4 +85,14 @@ test.describe("Form Validation and Submission", () => {
         await page.locator('button[type="submit"]').click();
         await expect(emailError).not.toBeVisible();
     });
+
+    test("handles select field validation", async ({ page }) => {
+        await page.locator('button[type="submit"]').click();
+
+        const selectError = page.locator("#subject ~ .text-red-500");
+        await expect(selectError).toBeVisible();
+
+        await page.selectOption("#subject", "general");
+        await expect(selectError).not.toBeVisible();
+    });
 });
