@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FormSchema } from "../component/jsonInput";
 
 export default function useAppState() {
     const [dark, setDark] = useState(false);

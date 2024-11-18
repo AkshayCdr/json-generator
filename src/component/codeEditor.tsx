@@ -1,4 +1,4 @@
-import JsonInput from "./jsonInput";
+import JsonInput, { FormSchema } from "./jsonInput";
 
 type CodeEditorArgs = {
     json: string;
