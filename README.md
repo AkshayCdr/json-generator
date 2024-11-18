@@ -6,6 +6,10 @@ live on https://json-generate.netlify.app/
 
 ![Imgur](https://i.imgur.com/LVyVcoS.png)
 
+### with different input types
+
+[Imgur](https://i.imgur.com/0nBWAuC.png)
+
 ---
 
 ## How to set up locally
